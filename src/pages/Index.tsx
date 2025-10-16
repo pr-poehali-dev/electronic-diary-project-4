@@ -15,16 +15,16 @@ interface Grade {
 
 const Index = () => {
   const [grades, setGrades] = useState<Grade[]>([
-    { id: '1', subject: 'Алгебра', grades: [4, 4, 5, 4, 4, 5, 4], quarterGrade: 4 },
-    { id: '2', subject: 'Геометрия', grades: [4, 5, 4, 4, 5, 4, 4], quarterGrade: 4 },
-    { id: '3', subject: 'Русский язык', grades: [5, 4, 4, 5, 4, 5, 4], quarterGrade: 4 },
-    { id: '4', subject: 'Литература', grades: [4, 5, 4, 4, 5, 4, 5], quarterGrade: 4 },
-    { id: '5', subject: 'Английский язык', grades: [5, 4, 4, 5, 5, 4, 4], quarterGrade: 4 },
-    { id: '6', subject: 'История', grades: [4, 4, 4, 5, 4, 4, 5], quarterGrade: 4 },
-    { id: '7', subject: 'Биология', grades: [5, 4, 5, 4, 4, 5, 4], quarterGrade: 4 },
-    { id: '8', subject: 'География', grades: [4, 5, 4, 4, 5, 4, 5], quarterGrade: 4 },
-    { id: '9', subject: 'Физика', grades: [4, 4, 5, 4, 4, 5, 4], quarterGrade: 4 },
-    { id: '10', subject: 'Информатика', grades: [5, 5, 4, 5, 5, 4, 5], quarterGrade: 5 },
+    { id: '1', subject: 'Алгебра', grades: [4, null, 4, 5, null, 4, 4, null, 5, 4], quarterGrade: 4 },
+    { id: '2', subject: 'Геометрия', grades: [null, 4, 5, null, 4, 4, null, 5, 4, 4], quarterGrade: 4 },
+    { id: '3', subject: 'Русский язык', grades: [5, 4, null, 4, 5, null, 4, 5, null, 4], quarterGrade: 4 },
+    { id: '4', subject: 'Литература', grades: [4, null, 5, 4, null, 4, 5, null, 4, 5], quarterGrade: 4 },
+    { id: '5', subject: 'Английский язык', grades: [5, null, 4, 4, null, 5, 5, 4, null, 4], quarterGrade: 4 },
+    { id: '6', subject: 'История', grades: [null, 4, 4, null, 4, 5, 4, null, 4, 5], quarterGrade: 4 },
+    { id: '7', subject: 'Биология', grades: [5, 4, null, 5, 4, null, 4, 5, 4, null], quarterGrade: 4 },
+    { id: '8', subject: 'География', grades: [4, null, 5, 4, null, 4, 5, null, 4, 5], quarterGrade: 4 },
+    { id: '9', subject: 'Физика', grades: [null, 4, 4, null, 5, 4, null, 4, 5, 4], quarterGrade: 4 },
+    { id: '10', subject: 'Информатика', grades: [5, 5, null, 4, 5, null, 5, 4, null, 5], quarterGrade: 5 },
   ]);
 
   const [editingCell, setEditingCell] = useState<{ gradeId: string; index: number } | null>(null);
@@ -40,22 +40,7 @@ const Index = () => {
     { date: '13.09', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
     { date: '16.09', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
     { date: '19.09', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '20.09', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '23.09', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '24.09', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '27.09', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '30.09', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '01.10', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '04.10', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '07.10', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '08.10', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '11.10', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '14.10', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '15.10', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '18.10', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '21.10', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
-    { date: '22.10', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
-    { date: '25.10', lessons: ['Алгебра', 'Русский язык', 'Английский язык', 'История', 'Физика'] },
+    { date: '27.09', lessons: ['Геометрия', 'Литература', 'Биология', 'География', 'Информатика'] },
   ];
 
   const handleCellClick = (gradeId: string, index: number, currentValue: number | null) => {
@@ -121,7 +106,7 @@ const Index = () => {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Электронный дневник
             </h1>
-            <p className="text-muted-foreground mt-1">1 сентября - 25 октября • 1 четверть</p>
+            <p className="text-muted-foreground mt-1">1 сентября - 16 октября • 1 четверть</p>
           </div>
         </div>
 
