@@ -133,15 +133,15 @@ const Index = () => {
                 <h2 className="text-2xl font-bold text-foreground">Расписание и оценки</h2>
               </div>
               
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
+              <div className="overflow-x-auto rounded-lg border-2 border-primary/20 shadow-lg">
+                <table className="w-full border-collapse min-w-max">
                   <thead>
                     <tr className="border-b-2 border-primary/20">
-                      <th className="text-left p-3 font-semibold text-foreground bg-gradient-to-r from-primary/10 to-secondary/10">
+                      <th className="text-left p-3 font-semibold text-foreground bg-gradient-to-r from-primary/10 to-secondary/10 sticky left-0 z-10">
                         Предмет
                       </th>
                       {schedule.map((day, idx) => (
-                        <th key={idx} className="text-center p-3 font-semibold text-sm text-foreground bg-gradient-to-r from-primary/10 to-secondary/10">
+                        <th key={idx} className="text-center p-3 font-semibold text-sm text-foreground bg-gradient-to-r from-primary/10 to-secondary/10 min-w-[80px]">
                           {day.date}
                         </th>
                       ))}
@@ -150,7 +150,7 @@ const Index = () => {
                   <tbody>
                     {grades.map((grade, gradeIdx) => (
                       <tr key={grade.id} className={`border-b border-gray-200 hover:bg-primary/5 transition-colors ${gradeIdx % 2 === 0 ? 'bg-gray-50/50' : ''}`}>
-                        <td className="p-3 font-medium text-foreground">{grade.subject}</td>
+                        <td className="p-3 font-medium text-foreground sticky left-0 z-10 bg-white">{grade.subject}</td>
                         {grade.grades.map((g, idx) => (
                           <td key={idx} className="text-center p-2">
                             {editingCell?.gradeId === grade.id && editingCell?.index === idx ? (
