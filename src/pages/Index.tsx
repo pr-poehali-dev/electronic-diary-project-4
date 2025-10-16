@@ -17,14 +17,16 @@ const Index = () => {
   const [grades, setGrades] = useState<Grade[]>([
     { id: '1', subject: 'Алгебра', grades: [4, null, 4, 5, null, 4, 4, null, 5, 4], quarterGrade: 4 },
     { id: '2', subject: 'Геометрия', grades: [null, 4, 5, null, 4, 4, null, 5, 4, 4], quarterGrade: 4 },
-    { id: '3', subject: 'Русский язык', grades: [5, 4, null, 4, 5, null, 4, 5, null, 4], quarterGrade: 4 },
+    { id: '3', subject: 'Русский язык', grades: [5, 4, null, 5, 5, null, 5, 5, null, 5], quarterGrade: 5 },
     { id: '4', subject: 'Литература', grades: [4, null, 5, 4, null, 4, 5, null, 4, 5], quarterGrade: 4 },
-    { id: '5', subject: 'Английский язык', grades: [5, null, 4, 4, null, 5, 5, 4, null, 4], quarterGrade: 4 },
+    { id: '5', subject: 'Английский язык', grades: [5, null, 5, 5, null, 5, 5, 4, null, 5], quarterGrade: 5 },
     { id: '6', subject: 'История', grades: [null, 4, 4, null, 4, 5, 4, null, 4, 5], quarterGrade: 4 },
     { id: '7', subject: 'Биология', grades: [5, 4, null, 5, 4, null, 4, 5, 4, null], quarterGrade: 4 },
     { id: '8', subject: 'География', grades: [4, null, 5, 4, null, 4, 5, null, 4, 5], quarterGrade: 4 },
-    { id: '9', subject: 'Физика', grades: [null, 4, 4, null, 5, 4, null, 4, 5, 4], quarterGrade: 4 },
+    { id: '9', subject: 'Физика', grades: [null, 5, 5, null, 5, 5, null, 5, 5, 5], quarterGrade: 5 },
     { id: '10', subject: 'Информатика', grades: [5, 5, null, 4, 5, null, 5, 4, null, 5], quarterGrade: 5 },
+    { id: '11', subject: 'Коми язык', grades: [4, null, 4, 5, null, 4, 4, null, 5, 4], quarterGrade: 4 },
+    { id: '12', subject: 'Химия', grades: [null, 4, 5, null, 4, 5, null, 4, 4, 5], quarterGrade: 4 },
   ]);
 
   const [editingCell, setEditingCell] = useState<{ gradeId: string; index: number } | null>(null);
